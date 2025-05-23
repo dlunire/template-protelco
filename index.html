@@ -9,6 +9,17 @@
     <style>
          :root {
             font-family: "Open Sans", sans-serif, arial;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            &::before,
+            &::after {
+                box-sizing: inherit;
+            }
         }
         
         section {
@@ -21,163 +32,340 @@
             margin: 0;
             height: 100vh;
         }
+        
+        p {
+            text-align: left;
+            margin-bottom: 0;
+        }
+        
+        .image {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .flex--margin-top {
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .flex {
+                flex-direction: column;
+                align-items: unset;
+            }
+        }
+        
+        .red {
+            color: #f00000;
+        }
+        
+        .blue {
+            color: #00d;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 0;
+        }
+        
+        ul {
+            margin-top: 0;
+        }
+        
+        .img {
+            display: flex;
+            min-width: 340px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .img {
+                min-width: unset;
+                width: 100%;
+            }
+        }
+        
+        .flex__item--content {
+            flex-grow: 1;
+        }
+        
+        .flex__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px auto;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .flex__content {
+                flex-direction: columns;
+                align-items: unset;
+            }
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        table td {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 7px;
+        }
+        
+        table th {
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .pensum-title {
+            text-align: left;
+            margin-top: 40px;
+        }
+        
+        .not-margin {
+            margin: 0;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 10px;
+        }
+        
+        .strong {
+            font-weight: bold;
+        }
+        
+        .center-cell {
+            text-align: center;
+        }
+        
+        .separator-cell {
+            border-left: 0;
+            border-right: 0;
+        }
+        
+        .system {
+            padding: 10px;
+        }
+        
+        .course-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .course-link {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: 0;
+            float: right;
+            transition: 300ms ease;
+        }
+        
+        .course-link:hover {
+            opacity: 0.8;
+        }
+        
+        .course-link {
+            opacity: 1;
+            transition: none;
+        }
+        
+        .course-link img {
+            display: block;
+            margin: 0;
+            margin-bottom: -10px;
+            margin-right: -10px;
+        }
+        
+        .clear {
+            clear: both;
+        }
     </style>
 </head>
 
 <body>
     <main>
         <section>
-            <h2 style="text-align: center;"><span style="color: #ff0000;"> CHEF ALTA <span style="color: #0000ff;">COCINA</span></span>
+            <h2 class="course-title">
+                <span class="red"> NOMBRE DEL</span>
+                <span class="blue">CURSO</span>
             </h2>
-            &nbsp;
-            <p style="text-align: left;"><span style="color: #ff0000;"><strong>Modalidad: </strong></span><span style="color: #000000;">Presencial</span></p>
-            <p style="text-align: left;"><span style="color: #ff0000;"><strong>Duración:</strong> </span><span style="color: #000000;">2 Semestres</span></p>
-            <p style="text-align: left;"><span style="color: #ff0000;"><strong>Título:</strong> </span><span style="color: #000000;">Técnico Laboral  en Chef Alta Cocina</span>
-                <a href="https://drive.google.com/file/d/1tno3iJV9ef63vcha6LY-xPvQpz94UVJ-/view?usp=share_link" target="_blank" rel="noopener"><img class="alignright wp-image-7599 size-medium" src="https://www.protelco.edu.co/wp-content/uploads/2021/06/botonpn-300x159.png" alt="" width="300" height="159" /></a>
-            </p>
-            <span style="color: #ff0000;"><strong>Registro:</strong> </span><span style="color: #000000;">No. 02821  del 3 de Agosto del 2022 emanada por el Ministerio de Educación Nacional</span>
-            <p style="text-align: left;"><span style="color: #000000;">Con este programa de formación obtendrás un desarrollo integral para aplicar en diferentes sectores económicos y productivos. Nuestros egresados son altamente calificados, competentes y autónomos. Podrás planear y dirigir la preparación y cocción de alimentos. </span></p>
-            &nbsp;
-            <h3><span style="color: #ff0000;">Perfil</span></h3>
-            <ul>
-                <li style="text-align: left;"><span style="color: #000000;"> CHEF ALTA COCINA</span></li>
-                <li style="text-align: left;"><span style="color: #000000;">Chef ejecutivo</span></li>
-                <li style="text-align: left;"><span style="color: #000000;"> Chef jefe</span></li>
-                <li style="text-align: left;"><span style="color: #000000;"> Chef pastelería</span></li>
-                <li style="text-align: left;"><span style="color: #000000;"> Chefs</span></li>
-                <li style="text-align: left;"><span style="color: #000000;"> Cocinero chef</span></li>
-                <li style="text-align: left;"><span style="color: #000000;"> Supervisor de Bodega</span><span style="color: #ff0000;"><img class="wp-image-16782 size-full alignright" src="https://www.protelco.edu.co/wp-content/uploads/2023/12/cheff.png" alt="" width="340" height="567" /></span></li>
-            </ul>
-            <div class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a">
-                <div dir="auto">
-                    <div dir="auto">
-                        <h3><span style="color: #ff0000;">Duración </span></h3>
+
+            <div class="flex">
+                <div class="flex__item flex__item--flex">
+                    <div class="flex__content">
+                        <div>
+                            <p class="not-margin">
+                                <strong class="red">Modalidad:</strong>
+                                <span>Indicar Modalidad.</span>
+                            </p>
+
+                            <p class="not-margin">
+                                <strong class="red">Duración:</strong>
+                                <span>Indicar duración.</span>
+                            </p>
+
+                            <p class="not-margin">
+                                <strong class="red">Título:</strong>
+                                <span>Indicar nombre o título del curso.</span>
+                            </p>
+
+                            <p class="not-margin">
+                                <strong class="red">Registro:</strong>
+                                <span>Indicar información de registro del curso con fecha incluida.</span>
+                            </p>
+
+                            <p>
+                                <span style="color: #000000;">Con este programa de formación obtendrás un desarrollo
+									integral para aplicar en diferentes sectores económicos
+									y productivos. Nuestros egresados son altamente
+									calificados, competentes y autónomos. Podrás planear y
+									dirigir la preparación y cocción de alimentos.
+								</span>
+                            </p>
+                        </div>
+
+                        <a class="image" href="https://drive.google.com/file/d/1tno3iJV9ef63vcha6LY-xPvQpz94UVJ-/view?usp=share_link" target="_blank" rel="noopener">
+                            <img src="https://www.protelco.edu.co/wp-content/uploads/2021/06/botonpn-300x159.png" alt="Alta cocina" />
+                        </a>
+                    </div>
+
+                    <div>
+                        <div class="flex flex--margin-top">
+                            <div class="flex__item flex__item--content">
+                                <h3 class="red">Perfil</h3>
+                                <ul>
+                                    <li>Perfil lista 1</li>
+                                    <li>Perfil lista 2</li>
+                                    <li>Perfil lista 3</li>
+                                    <li>Perfil lista 4</li>
+                                    <li>Perfil lista 5</li>
+                                    <li>Perfil lista 6</li>
+                                    <li>Perfil lista 7</li>
+                                </ul>
+
+
+                                <h3 class="red not-margin">Duración</h3>
+                                <p class="not-margin"><strong>⌛ Indicar duración</strong></p>
+
+                                <h3 class="red">Requisitos</h3>
+                                <ul>
+                                    <li>1 fotocopia del CC o TI ampliada al 150%</li>
+                                    <li>1 Fotos 3 × 3 fondo Azul</li>
+                                    <li>16 Años Cumplidos</li>
+                                    <li>Certificado Original de Notas de 9° Aprobado ó</li>
+                                    <li>Diploma y Acta de grado de Bachiller</li>
+                                    <li>Si eres Venezolano el Certificado PPT</li>
+                                </ul>
+                            </div>
+
+                            <div class="flex__item">
+                                <img class="img" src="https://www.protelco.edu.co/wp-content/uploads/2023/12/cheff.png" alt="" width="340" height="567" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div dir="auto">
-                <h5><span style="color: #000000;">⌛ 2 Semestres</span></h5>
-            </div>
-            <h3 style="text-align: left;"><span style="color: #ff0000;">Requisitos</span></h3>
-            <ul>
-                <li><span style="color: #000000;">1 fotocopia del CC o TI ampliada al 150%</span></li>
-                <li><span style="color: #000000;">1 Fotos 3×3 fondo Azul</span></li>
-                <li><span style="color: #000000;">16 Años Cumplidos </span></li>
-                <li><span style="color: #000000;">Certificado Original de Notas de 9° Aprobado ó</span></li>
-                <li><span style="color: #000000;">Diploma y Acta de grado de Bachiller</span></li>
-                <li><span style="color: #000000;">Si eres Venezolano el Certificado PPT</span></li>
-            </ul>
-            &nbsp;
-            <h3></h3>
-            <h3 style="text-align: center;"><span style="color: #ff0000;"><span style="color: #0000ff;">PENSUM TECNICO EN</span> CHEF ALTA COCINA</span>
+
+            <h3 class="pensum-title">
+                <span class="red">PÉNSUM TÉCNICO EN</span>
+                <span class="blue">NOMBRE DEL CURSO</span>
             </h3>
+
             <table width="728">
+                <thead>
+                    <tr>
+                        <th class="center-cell">Nº</th>
+                        <th colspan="2" class="red">I SEMESTRE</th>
+                        <th class="center-cell">Nº</th>
+                        <th class="red">II SEMESTRE</th>
+                    </tr>
+                </thead>
+
                 <tbody>
                     <tr>
-                        <td width="37"></td>
-                        <td width="335"><strong><span style="color: #ff0000;">I SEMESTRE</span></strong></td>
-                        <td width="29"></td>
-                        <td width="37"></td>
-                        <td width="290"><strong><span style="color: #ff0000;">II SEMESTRE</span></strong></td>
+                        <td style="text-align: center;">1</td>
+                        <td colspan="2">CURSO 1</td>
+                        <td style="text-align: center;">6</td>
+                        <td>CURSO 6</td>
                     </tr>
+
                     <tr>
-                        <td style="text-align: center;"><span style="color: #000000;">1</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">HIGIENE Y MANIPULACIÓN DE ALIMENTOS.</span></div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td style="text-align: center;"><span style="color: #000000;">6</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">Cocinas del mundo (asignatura de capacitación electiva, orientada a la técnica en Cocina Oriental).</span></div>
-                            </div>
-                        </td>
+                        <td style="text-align: center;">2</td>
+                        <td colspan="2">CURSO 2</td>
+                        <td style="text-align: center;">7</td>
+                        <td>CURSO 7</td>
                     </tr>
+
                     <tr>
-                        <td style="text-align: center;"><span style="color: #000000;">2</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">FONDOS Y SALSAS.</span></div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td style="text-align: center;"><span style="color: #000000;">7</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">Costos y administración.</span></div>
-                            </div>
-                        </td>
+                        <td style="text-align: center;">3</td>
+                        <td colspan="2">CURSO 3</td>
+                        <td style="text-align: center;">8</td>
+                        <td>CURSO 8</td>
                     </tr>
+
                     <tr>
-                        <td style="text-align: center;"><span style="color: #000000;">3</span></td>
-                        <td width="335">
-                            <div>
-                                <div><span style="color: #000000;">COCINA COLOMBIANA.</span></div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td style="text-align: center;"><span style="color: #000000;">8</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">PANADERIA Y REPOSTERIA BÁSICA.</span></div>
-                            </div>
-                        </td>
+                        <td style="text-align: center;">4</td>
+                        <td colspan="2">CURSO 4</td>
+                        <td style="text-align: center;">9</td>
+                        <td>CURSO 9</td>
                     </tr>
+
                     <tr>
-                        <td style="text-align: center;"><span style="color: #000000;">4</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">TÉCNICAS DE CORTE EN CARNES.</span></div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td style="text-align: center;"><span style="color: #000000;">9</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">COCINA INTERNACIONAL I</span></div>
-                            </div>
-                        </td>
+                        <td style="text-align: center;">5</td>
+                        <td colspan="2">CURSO 5</td>
+                        <td style="text-align: center;">10</td>
+                        <td>CURSO 10</td>
                     </tr>
+
                     <tr>
-                        <td style="text-align: center;"><span style="color: #000000;">5</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">TÉCNICAS DE CORTE EN AVEZ Y MARISCOS.</span></div>
-                            </div>
-                        </td>
-                        <td></td>
-                        <td style="text-align: center;"><span style="color: #000000;">10</span></td>
-                        <td>
-                            <div>
-                                <div><span style="color: #000000;">COCINA INTERNACIONAL II</span></div>
-                            </div>
-                        </td>
+                        <td colspan="3" class="red strong center-cell">Lúcidas</td>
+                        <td colspan="2" class="red strong center-cell">Lúcidas</td>
                     </tr>
+
                     <tr>
-                        <td style="text-align: center;"></td>
-                        <td style="text-align: center;"><span style="color: #ff0000;"><b>Lúdicas</b></span></td>
-                        <td style="text-align: center;"></td>
-                        <td style="text-align: center;"></td>
-                        <td style="text-align: center;"><span style="color: #ff0000;"><b>Lúdicas</b></span></td>
+                        <td colspan="5" class="separator-cell">&nbsp;</td>
                     </tr>
+
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align: center;"></td>
-                        <td style="text-align: center;" colspan="4"><strong><span style="color: #ff0000;">Sistemas</span></strong></td>
+                        <td colspan="5" class="center-cell red strong system">Sistemas</td>
                     </tr>
                 </tbody>
             </table>
-            <a href="https://site2.q10.com/Preinscripcion?aplentId=264b8812-4b57-47e2-893b-96d3252e1b2b"><img class="wp-image-18061 size-medium alignright" src="https://www.protelco.edu.co/wp-content/uploads/2024/05/BotonInscribete-300x120.png" alt="" width="300" height="120" /></a>
+
+            <div class="clear"></div>
+
+            <a class="course-link" href="https://site2.q10.com/Preinscripcion?aplentId=264b8812-4b57-47e2-893b-96d3252e1b2b" target="_blank">
+                <img src="https://www.protelco.edu.co/wp-content/uploads/2024/05/BotonInscribete-300x120.png" alt="Preinscripción" title="Pre-inscripción" />
+            </a>
+
+            <div class="clear"></div>
         </section>
     </main>
+
 </body>
 
 </html>
